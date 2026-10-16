@@ -1,0 +1,15 @@
+{
+  "name": "lab-fundamentos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "0.01-solucao.js",
+  "scripts": {
+    "test": "node --test",
+    "dev": "node app.js"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  }
+}
