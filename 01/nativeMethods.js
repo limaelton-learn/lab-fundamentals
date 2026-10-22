@@ -57,7 +57,8 @@ function e4() {
 function e5() {
     console.log("=== EXERCICIO 5 ====");
     const input = [10, 20, 5];
-    const sumWithInput = input.reduce((accumulator, currentValue) =>  accumulator + currentValue);
+    const initialValue = 0;
+    const sumWithInput = input.reduce((accumulator, currentValue) =>  accumulator + currentValue, initialValue);
 
     console.log(sumWithInput);
 }
@@ -73,9 +74,15 @@ function e6() {
     const objEntries = Object.entries(input);
 
     console.log(input);
+
     console.log(objKeys);
     console.log(objValues);
     console.log(objEntries);
+
+    console.log(Array.isArray(input));
+    console.log(Array.isArray(objKeys));
+    console.log(Array.isArray(objValues));
+    console.log(Array.isArray(objEntries));
 }
 
 function e7() {
@@ -136,13 +143,15 @@ function e10() {
     }
 
     //tests
-    console.log(Object.getOwnPropertyDescriptor(record));
+    console.log(Object.getOwnPropertyDescriptor(record, 'id'));
     console.log(Object.getOwnPropertyNames(record));
     console.log(Object.getOwnPropertySymbols(record));
 
     console.log(record.id);
     console.log(record[firstSymbol]);
     console.log(record[secSymbol]);
+
+    console.log("symbols equal? R:", firstSymbol === secSymbol);
 }
 
 function e11() {
@@ -155,11 +164,14 @@ function e11() {
     stockByCode.set("keyboard", 4);
 
     console.log(stockByCode);
+    console.log("getKeyboard: ", stockByCode.get("keyboard"));
 
     console.log(stockByCode.has("monitor"));
     
+    console.log("size: ", stockByCode.size);
     console.log(stockByCode.delete("mouse"));
     console.log(stockByCode.has("mouse"));
+    console.log("size: ", stockByCode.size);
 
 }
 
@@ -183,18 +195,18 @@ function e12() {
 }
 
 const execute = () => {
-    e1();
-    e2();
-    e3();
-    e4();
-    e5();
-    e6();
-    e7();
-    e8();
-    e9();
-    e10();
+    // e1();
+    // e2();
+    // e3();
+    // e4();
+    // e5();
+    // e6();
+    // e7();
+    // e8();
+    // e9();
+    // e10();
     e11();
-    e12();
+    // e12();
 }
 
 export default execute;
