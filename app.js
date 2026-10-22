@@ -1,5 +1,6 @@
 import pc from 'picocolors';
 import { groupByCategory } from './001/grouper.js'
+import execute from './01/nativeMethods.js';
 
 const exercise = () => {
     const itens = [
@@ -13,4 +14,4 @@ const exercise = () => {
     console.log(pc.green(JSON.stringify(groupedItens, null, 2)));
 }
 
-exercise();
+execute();
