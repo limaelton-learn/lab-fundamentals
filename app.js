@@ -1,6 +1,7 @@
 import pc from 'picocolors';
 import { groupByCategory } from './001/grouper.js'
-import execute from './01/nativeMethods.js';
+import { readMode, chooseLabel, updateSettings } from './01/3/scopeLab.js';
+import execute from './01/1/nativeMethods.js';
 
 const exercise = () => {
     const itens = [
@@ -14,4 +15,7 @@ const exercise = () => {
     console.log(pc.green(JSON.stringify(groupedItens, null, 2)));
 }
 
-execute();
+// execute();
+
+const a = updateSettings();
+console.log(a);
